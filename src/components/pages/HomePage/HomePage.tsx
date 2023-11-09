@@ -20,7 +20,7 @@ export function HomePage() {
       field: 'name',
     },
   ];
-  const { data, loading, refetch } = useQuery(GetCountriesQuery);
+  const { data, loading, error, refetch } = useQuery(GetCountriesQuery);
 
   const debouncedCountryCode = useDebounce(countryCode, 200);
 
@@ -32,6 +32,17 @@ export function HomePage() {
 
     refetch({ code: undefined });
   }, [debouncedCountryCode, refetch]);
+
+  if (error) {
+    return (
+      <div className="flex flex-col gap-4 w-[90%] h-fit-content mx-auto my-4">
+        <p className="text-center">
+          Something happened in the API. Please try again later or search for
+          another code
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-4 w-[90%] h-fit-content mx-auto my-4">
