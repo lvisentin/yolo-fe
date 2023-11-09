@@ -21,7 +21,7 @@ export function TextField({
   name,
 }: TextFieldProps) {
   return (
-    <div className="form-control relative">
+    <div className="form-control relative w-full">
       <Label label={label} name={name} />
       <Input
         value={value}
