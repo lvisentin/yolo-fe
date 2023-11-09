@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../../context/provider/ThemeProvider';
+import ToggleThemeButton from '../../atoms/ToggleThemeButton/ToggleThemeButton';
+import HeaderLogo from '../../atoms/HeaderLogo/HeaderLogo';
 
 function Header() {
   const { theme, toggle } = useContext(ThemeContext);
@@ -15,18 +17,18 @@ function Header() {
 
   return (
     <header>
-      <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8">
+      <nav className="navbar bg-base-100 shadow-lg px-4 sm:px-8">
         <div className="flex-1">
-          <h1 className="text-lg font-bold mx-4">Search Countries</h1>
+          <HeaderLogo />
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a onClick={toggle}>Toggle Theme</a>
+              <ToggleThemeButton onClick={toggle}>{theme.toUpperCase()}</ToggleThemeButton>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
