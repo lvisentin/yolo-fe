@@ -48,3 +48,6 @@ For running this project you will need to do:
 It will start the project in the port 5173.
 
 ## Screenshots
+
+![Mobile light version](https://github.com/lvisentin/yolo-fe/blob/main/img/mobile%20light.png?raw=true)
+![Mobile dark version](https://github.com/lvisentin/yolo-fe/blob/main/img/mobile%20dark.png?raw=true)
