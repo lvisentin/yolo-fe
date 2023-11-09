@@ -18,7 +18,6 @@ describe('Header Component', () => {
   });
 
   it('should render the header with dark theme', async () => {
-    // Mock the context values to simulate dark theme
     const { getByRole } = render(
       <ThemeProvider>
         <Header />

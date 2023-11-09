@@ -2,7 +2,6 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { ThemeContext, ThemeProvider } from './ThemeProvider';
 describe('ThemeProvider Component', () => {
   beforeEach(async () => {
-    // Create a virtual DOM environment
     const jsdom = await import('jsdom');
     const { JSDOM } = jsdom;
     const dom = new JSDOM('<!doctype html><html><body></body></html>');
