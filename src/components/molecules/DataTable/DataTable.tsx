@@ -17,7 +17,9 @@ export function DataTable({ columns, values }: DataTableProps) {
         <thead>
           <tr role="row">
             {columns.map((column, index) => (
-              <th key={index}>{column.name}</th>
+              <th key={index}>
+                <p>{column.name}</p>
+              </th>
             ))}
           </tr>
         </thead>
@@ -25,7 +27,9 @@ export function DataTable({ columns, values }: DataTableProps) {
           {values.map((value, index) => (
             <tr role="row" key={index}>
               {columns.map((column, index) => (
-                <td key={index}>{value[column.field]}</td>
+                <td key={index}>
+                  <p>{value[column.field]}</p>
+                </td>
               ))}
             </tr>
           ))}

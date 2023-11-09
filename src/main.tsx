@@ -1,8 +1,8 @@
-import React from 'react';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ThemeProvider } from './context/provider/ThemeProvider.tsx';
 
 export const client = new ApolloClient({
   uri: 'https://countries.trevorblades.com/',
@@ -11,6 +11,8 @@ export const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </ApolloProvider>
 );
