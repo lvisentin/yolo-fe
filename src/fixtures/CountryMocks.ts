@@ -1,4 +1,4 @@
-import { GetCountriesQuery } from '../components/graphql/GetCountries.query';
+import { GetCountriesQuery } from '../graphql/GetCountries.query';
 
 export const mockCountries = [
   {

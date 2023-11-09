@@ -13,7 +13,7 @@ export interface DataTableProps {
 export function DataTable({ columns, values }: DataTableProps) {
   return (
     <div className="overflow-y-auto max-h-80 w-full">
-      <table className="table" role="table">
+      <table className="table w-full" role="table">
         <thead>
           <tr role="row">
             {columns.map((column, index) => (

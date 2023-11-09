@@ -1,12 +1,12 @@
+import { useQuery } from '@apollo/client';
+import { useEffect, useState } from 'react';
+import { useDebounce } from '../../../hooks/useDebounce';
 import { Country } from '../../../types/Country';
 import DataTable, {
   DataTableColumn,
 } from '../../molecules/DataTable/DataTable';
 import { TextField } from '../../molecules/TextField/TextField';
-import React, { useEffect, useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { GetCountriesQuery } from '../../graphql/GetCountries.query';
-import { useDebounce } from '../../../hooks/useDebounce';
+import { GetCountriesQuery } from '../../../graphql/GetCountries.query';
 
 function HomePage() {
   const [countryCode, setCountryCode] = useState<string>('');
@@ -26,7 +26,7 @@ function HomePage() {
 
   useEffect(() => {
     if (debouncedCountryCode) {
-      refetch({ code: { in: debouncedCountryCode } });
+      refetch({ code: { in: debouncedCountryCode.toUpperCase() } });
       return;
     }
 
@@ -51,9 +51,7 @@ function HomePage() {
           <span className="loading loading-spinner loading-lg"></span>
         </div>
       ) : data?.countries && data?.countries?.length > 0 ? (
-        <div className="">
-          <DataTable columns={tableColumns} values={data?.countries} />
-        </div>
+        <DataTable columns={tableColumns} values={data?.countries} />
       ) : (
         'We didnt find any countries with that code'
       )}
