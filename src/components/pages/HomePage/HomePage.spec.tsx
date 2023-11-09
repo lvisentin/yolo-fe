@@ -7,4 +7,10 @@ describe('HomePage', () => {
 
     expect(getByText('Search countries')).toBeInTheDocument();
   });
+
+  it('should render a textfield', () => {
+    const { getByPlaceholderText } = render(<HomePage />);
+
+    expect(getByPlaceholderText('Type a country code')).toBeInTheDocument();
+  });
 });
