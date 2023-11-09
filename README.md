@@ -38,8 +38,6 @@ I also made a theme toggle utilizing Context API that toggles between [Daisy's](
 
 For running this project you will need to do:
 
-- Configure the top-level `parserOptions` property like this:
-
 ```bash
    git clone https://github.com/lvisentin/yolo-fe.git
    cd yolo-fe
@@ -48,3 +46,5 @@ For running this project you will need to do:
 ```
 
 It will start the project in the port 5173.
+
+## Screenshots
