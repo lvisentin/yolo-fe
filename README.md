@@ -39,13 +39,23 @@ I also made a theme toggle utilizing Context API that toggles between [Daisy's](
 For running this project you will need to do:
 
 ```bash
-   git clone https://github.com/lvisentin/yolo-fe.git
-   cd yolo-fe
-   npm install
-   npm run dev
+git clone https://github.com/lvisentin/yolo-fe.git
+cd yolo-fe
+npm install
+npm run dev
 ```
 
 It will start the project in the port 5173.
+
+## Instructions to test
+
+For testing, you just need to run
+
+```bash
+npm run test
+```
+
+It will run the tests and generate the coverage folder for you.
 
 ## Screenshots
 Mobile light version            |  Mobile dark version
