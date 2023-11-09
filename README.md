@@ -1,27 +1,50 @@
-# React + TypeScript + Vite
+# Technical Assessment for Yolo Group - Hub88 Team
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is my technical assessment for the front-end developer position for the Hub88 Team in Yolo Group.
 
-Currently, two official plugins are available:
+It consists in a simple app for listing countries that uses [trevorblades](https://countries.trevorblades.com/) countries API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was made using Vite + React + Tailwind, and for the unit tests I chose Jest.
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was made utilizing the [Atomic](https://atomicdesign.bradfrost.com/chapter-2/) Design Pattern, this is the structure:
+
+```
+project
+│   src
+└───components
+│   └───atoms
+│       │   Input
+│       │   Label
+│       │   ToggleThemeButton
+│       │   HeaderLogo
+│   └───molecules
+│       │   Header
+│       │   DataTable
+│       │   TextField
+│   └───templates
+│       │   HomePageTemplate
+│   └───pages
+│       │   HomePage
+
+```
+
+I also created some other folders with shared stuff, for example: graphql, hooks, types, fixtures and context.
+
+I also made a theme toggle utilizing Context API that toggles between [Daisy's](https://daisyui.com/) light and dark theme.
+
+## Instructions to run
+
+For running this project you will need to do:
 
 - Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+   git clone https://github.com/lvisentin/yolo-fe.git
+   cd yolo-fe
+   npm install
+   npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+It will start the project in the port 5173.
