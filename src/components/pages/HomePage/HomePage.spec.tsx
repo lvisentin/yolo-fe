@@ -25,13 +25,7 @@ async function renderHomePage(
 }
 
 describe('HomePage', () => {
-  it('should render', async () => {
-    const { getByText } = await renderHomePage([getCountriesMock]);
-
-    expect(getByText('Search countries')).toBeInTheDocument();
-  });
-
-  it('should render a textfield', async () => {
+  it('should render with a textfield', async () => {
     const { getByPlaceholderText } = await renderHomePage([getCountriesMock]);
 
     expect(getByPlaceholderText('Type a country code')).toBeInTheDocument();

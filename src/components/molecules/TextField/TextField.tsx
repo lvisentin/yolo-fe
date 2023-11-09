@@ -1,10 +1,9 @@
-
+import { ChangeEvent } from 'react';
 import { Input } from '../../atoms/Input/Input';
 import { Label } from '../../atoms/Label/Label';
-import { SyntheticEvent } from 'react';
 
 export interface TextFieldProps {
-  onChange?: (e: SyntheticEvent) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   value: string;
   placeholder: string;
   label: string;

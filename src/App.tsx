@@ -1,7 +1,5 @@
-import { useContext, useEffect } from 'react';
-import { HomePage } from './components/pages/HomePage/HomePage';
-import { ThemeContext } from './context/provider/ThemeProvider';
 import Header from './components/molecules/Header/Header';
+import { HomePage } from './components/pages/HomePage/HomePage';
 
 function App() {
   return (

@@ -1,18 +1,18 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { ThemeContext } from '../../../context/provider/ThemeProvider';
-import ToggleThemeButton from '../../atoms/ToggleThemeButton/ToggleThemeButton';
 import HeaderLogo from '../../atoms/HeaderLogo/HeaderLogo';
+import ToggleThemeButton from '../../atoms/ToggleThemeButton/ToggleThemeButton';
 
 function Header() {
   const { theme, toggle } = useContext(ThemeContext);
 
   useEffect(() => {
     if (theme === 'dark') {
-      document.querySelector('html').setAttribute('data-theme', 'dark');
+      document.querySelector('html')?.setAttribute('data-theme', 'dark');
       return;
     }
 
-    document.querySelector('html').setAttribute('data-theme', 'light');
+    document.querySelector('html')?.setAttribute('data-theme', 'light');
   }, [theme]);
 
   return (
@@ -24,7 +24,9 @@ function Header() {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <ToggleThemeButton onClick={toggle}>{theme.toUpperCase()}</ToggleThemeButton>
+              <ToggleThemeButton onClick={toggle}>
+                <span>{theme.toUpperCase()}</span>
+              </ToggleThemeButton>
             </li>
           </ul>
         </div>

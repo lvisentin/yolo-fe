@@ -1,4 +1,4 @@
-import React, { ReactElement, SyntheticEvent } from 'react';
+import { ReactElement, SyntheticEvent } from 'react';
 
 interface ToggleThemeButtonProps {
   onClick: (e: SyntheticEvent) => void;

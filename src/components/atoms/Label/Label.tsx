@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface LabelProps {
   name: string;
   label: string;

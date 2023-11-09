@@ -1,7 +1,7 @@
-import { SyntheticEvent } from 'react';
+import { ChangeEvent } from 'react';
 
 export interface InputProps {
-  onChange?: (e: SyntheticEvent) => void;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   value: string;
   placeholder: string;
   id: string;

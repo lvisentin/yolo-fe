@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-import DataTable, { DataTableColumn } from './DataTable';
 import { render, screen } from '@testing-library/react';
-import { Country } from '@/types/Country';
+import DataTable, { DataTableColumn } from './DataTable';
+import { Country } from '../../../types/Country';
 
 const sampleColumns: DataTableColumn<keyof Country>[] = [
   {
